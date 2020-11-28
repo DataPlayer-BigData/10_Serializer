@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Main-Class: tu.cit.example.JsonSerializer.ProducerApps
+Class-Path: log4j-api-2.11.0.jar zstd-jni-1.4.3-1.jar jackson-annotation
+ s-2.11.0.jar lz4-java-1.6.0.jar slf4j-api-1.7.28.jar kafka-clients-2.4.
+ 0.jar jackson-databind-2.11.0.jar log4j-slf4j-impl-2.11.0.jar jackson-d
+ ataformat-smile-2.11.0.jar log4j-core-2.11.0.jar snappy-java-1.1.7.3.ja
+ r jackson-core-2.11.0.jar
+

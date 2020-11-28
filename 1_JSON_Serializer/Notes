@@ -1,0 +1,45 @@
+HOW TO USE CUSTOM JSON BINARY DESERIALIZER USING kafka-console-consumer.sh
+---------------------------------------------------------------
+Note : - Remove logger from your application completely first.
+Step 1  : Build your project
+          a) Select Project-->File-->Project Structure-->Artifacts-->Output --> + --> Add compiled output
+          b) Build-->build artifact
+          c) copy your jar in $KAFKA_HOME/libs
+Step 2  : Run your ProducerApps from IntelliJ Idea
+Step 3  : Go to the command prompt and run below command to consume message using custom JsonDeserializer
+
+TEST JSON BINARY DESERIALIZER (StudentJsonDeserializerBinary)
+--------------------------------------------------------------
+Step 1 : Run ProducerApp with VALUE SERIALIZER = StudentJsonSerializerBinary
+Step 2 : To consume message, Run below command on command prompt
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic student-topic-Binary --from-beginning \
+--property print.key=true \
+--property value.deserializer=tu.cit.example.JsonSerializer.StudentJsonDeserializerBinaryPrint
+
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic student-topic-Binary --from-beginning \
+--property print.key=true \
+--property value.deserializer=tu.cit.example.JsonSerializer.StudentJsonDeserializerBinary
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+HOW TO USE CUSTOM StudentJsonSerializer using kafka-console-producer.sh
+-----------------------------------------------------------------
+kafka-console-producer.sh --broker-list localhost:9092 --topic student-topic2 \
+--property parse.key=true --property key.separator="," \
+--property value.serializer=tu.cit.example.JsonSerializer.StudentJsonSerializer
+
+"CS",{"studentid":11,"studentname":"Mr.K","dept":"CS","coursename":"DBMS","marks":78.5}
+
+HOW TO USE CUSTOM StudentJsonDeserializer using kafka-console-consumer.sh
+-------------------------------------------------------------------
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic student-topic6 --from-beginning \
+--property print.key=true
+--property value.deserializer=tu.cit.example.JsonSerializer.StudentJsonDeserializer
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+StudentModelSerDe
+------------------

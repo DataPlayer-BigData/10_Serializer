@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MyJsonSerializer">
+    <output-path>$PROJECT_DIR$/out/artifacts</output-path>
+    <root id="archive" name="MyJsonSerializer.jar">
+      <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.11.0" />
+      <element id="library" level="project" name="Maven: com.github.luben:zstd-jni:1.4.3-1" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.11.0" />
+      <element id="library" level="project" name="Maven: org.lz4:lz4-java:1.6.0" />
+      <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.28" />
+      <element id="library" level="project" name="Maven: org.apache.kafka:kafka-clients:2.4.0" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.11.0" />
+      <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-slf4j-impl:2.11.0" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-smile:2.11.0" />
+      <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.11.0" />
+      <element id="library" level="project" name="Maven: org.xerial.snappy:snappy-java:1.1.7.3" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.11.0" />
+      <element id="module-output" name="JsonSerializer" />
+    </root>
+  </artifact>
+</component>
